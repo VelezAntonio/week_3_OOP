@@ -1,23 +1,18 @@
-public class trailer {
+public class trailer extends Motorized{
     private String fuel;
-    private String engine;
+    private int engine;
     private int axles;
+    private String type;
 
-    public trailer() {
+    public trailer() {super();
     }
 
-    public trailer(String fuel, String engine, int axles) {
+    public trailer(int year, String make, String model, String color, String fuel, int engine, int axles, String type) {
+        super(year, make, model, color);
         this.fuel = fuel;
         this.engine = engine;
-        this.axles = axles;
-    }
-
-    public int getAxles() {
-        return axles;
-    }
-
-    public void setAxles(int axles) {
-        this.axles = axles;
+        this.axles= axles;
+        this.type = type;
     }
 
     public String getFuel() {
@@ -28,11 +23,31 @@ public class trailer {
         this.fuel = fuel;
     }
 
-    public String getEngine() {
+    public int getEngine() {
         return engine;
     }
 
-    public void setEngine(String engine) {
+    public void setEngine(int engine) {
         this.engine = engine;
+    }
+
+    public int getAxles(){return axles;}
+
+    public void setAxles(){this.axles = axles;}
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String toString(){
+        return super.toString()+
+                " Fuel: " + fuel  +
+                " Cylinders: " + engine  +
+                " Axles: " + axles +
+                " Vehicle Type: " + type;
     }
 }

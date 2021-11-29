@@ -1,41 +1,41 @@
-public class Motorized extends Vehicles{
-    private String passenger;
-    private String trucks;
-    private String trailer;
+public class Motorized extends Vehicles {
+    private String fuel;
+    private int engine;
+    private String type;
 
-    public Motorized(String passenger, String trucks, String trailer) {
-        this.passenger = passenger;
-        this.trucks = trucks;
-        this.trailer = trailer;
+    public Motorized(int year, String make, String model, String color) {
+        super(year, make, model, color);
     }
 
     public Motorized() {
 
     }
 
-
-    public String getPassenger() {
-        return passenger;
+    public String getFuel() {
+        return fuel;
     }
 
-    public void setPassenger(String passenger) {
-        this.passenger = passenger;
+    public void setFuel(String fuel) {
+        this.fuel = fuel;
     }
 
-    public String getTrucks() {
-        return trucks;
+    public int getEngine() {
+        return engine;
     }
 
-    public void setTrucks(String trucks) {
-        this.trucks = trucks;
+    public void setEngine(int engine) {
+        this.engine = engine;
     }
 
-    public String getTrailer() {
-        return trailer;
+    public String getType() {
+        return type;
     }
 
-    public void setTrailer(String trailer) {
-        this.trailer = trailer;
+    public void setType(String type) {
+        this.type = type;
     }
+
+
+
 }
 

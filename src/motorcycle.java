@@ -1,13 +1,16 @@
-public class motorcycle {
+public class motorcycle extends Motorized{
     private String fuel;
-    private String engine;
+    private int engine;
+    private String type;
 
-    public motorcycle() {
+    public motorcycle() {super();
     }
 
-    public motorcycle(String fuel, String engine) {
+    public motorcycle(int year, String make, String model, String color, String fuel, int engine, String type) {
+        super(year, make, model, color);
         this.fuel = fuel;
         this.engine = engine;
+        this.type = type;
     }
 
     public String getFuel() {
@@ -18,11 +21,26 @@ public class motorcycle {
         this.fuel = fuel;
     }
 
-    public String getEngine() {
+    public int getEngine() {
         return engine;
     }
 
-    public void setEngine(String engine) {
+    public void setEngine(int engine) {
         this.engine = engine;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String toString(){
+        return super.toString()+
+                " Fuel: " + fuel  +
+                " Cylinders: " + engine  +
+                " Vehicle Type: " + type;
     }
 }

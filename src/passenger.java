@@ -1,11 +1,7 @@
-public class passenger extends  Vehicles{
+public class passenger extends  Motorized{
     private String fuel;
     private int engine;
     private String type;
-
-    public passenger() {
-        super();
-    }
 
     public passenger(int year, String make, String model, String color, String fuel, int engine, String type) {
         super(year, make, model, color);
@@ -13,13 +9,6 @@ public class passenger extends  Vehicles{
         this.engine = engine;
         this.type = type;
     }
-
-    public passenger(String fuel, int engine, String type) {
-        this.fuel = fuel;
-        this.engine = engine;
-        this.type = type;
-    }
-
     public String getFuel() {
         return fuel;
     }
@@ -44,11 +33,14 @@ public class passenger extends  Vehicles{
         this.type = type;
     }
 
+
+
+
     @Override
     public String toString() {
         return super.toString()+
                 " Fuel: " + fuel  +
                 " Cylinders: " + engine  +
-                " Vehicle Type: " + type  ;
+                " Vehicle Type: " + type;
     }
 }
